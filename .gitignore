@@ -1,0 +1,9 @@
+# This public portfolio repository intentionally tracks documentation only.
+# The working folder may contain a local source snapshot for reference, but no
+# production code, configuration, data, or business records are published.
+*
+!.gitignore
+!README.md
+!docs/
+!docs/**
+
