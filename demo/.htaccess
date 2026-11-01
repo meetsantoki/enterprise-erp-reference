@@ -1,0 +1,63 @@
+Options -Indexes
+
+# Compress JSON and application assets on servers where mod_deflate is
+# available. Large ERP module responses shrink substantially over LAN/WAN;
+# media is excluded because it is already compressed and supports byte ranges.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/json application/javascript text/javascript text/css text/html text/plain image/svg+xml
+  SetEnvIfNoCase Request_URI "\.(?:mp4|webm|ogg|jpe?g|png|gif|webp|pdf|zip)$" no-gzip dont-vary
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(?:png|jpe?g|webp|svg|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "^(?:index\.html|service-worker\.js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule php_module>
+  # Saved Documents has no application-level file-size cap.
+  php_value upload_max_filesize 0
+  php_value post_max_size 0
+  php_value max_input_time -1
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Runtime records, test exports and internal notes must never be served.
+  RewriteRule ^(?:data|tmp|output|notes|backups)(?:/|$) - [F,L,NC]
+  RewriteRule ^backend/.*\.(?:md|txt)$ - [F,L,NC]
+  RewriteRule ^backend/cosec-event/([A-Za-z0-9_-]{24,128})/?$ backend/cosec_event.php?receiver_key=$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "same-origin"
+  Header always set Permissions-Policy "camera=(self), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Content-Security-Policy "frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "(^\.|(^|\.)env$|config(?:\.nas)?\.php$|cctv_config\.php$|composer\.(json|lock)$|.*\.(sql|log|bak|ini|dist|md)$)">
+    Require all denied
+  </FilesMatch>
+</IfModule>

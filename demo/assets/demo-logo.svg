@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" role="img" aria-labelledby="title desc">
+  <title id="title">DemoSolar Industries</title>
+  <desc id="desc">Fictional portfolio brand logo</desc>
+  <rect width="600" height="180" rx="28" fill="#f8fafc"/>
+  <circle cx="92" cy="90" r="50" fill="#fbbf24"/>
+  <path d="M30 130h125L92 72z" fill="#0284c7" opacity=".92"/>
+  <text x="175" y="82" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="#0c4a6e">DemoSolar</text>
+  <text x="178" y="125" font-family="Arial,sans-serif" font-size="24" font-weight="600" letter-spacing="4" fill="#0f766e">INDUSTRIES</text>
+</svg>

@@ -1,0 +1,161 @@
+.tour-page { max-width: 1500px; margin: 0 auto; }
+.tour-hero { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 28px; margin-bottom:16px; border:1px solid rgba(12,74,110,.1); border-radius:16px; color:#fff; background:var(--demosolar-gradient); box-shadow:0 12px 28px rgba(12,74,110,.14); }
+.tour-hero h2 { margin:5px 0 4px; font-size:25px; letter-spacing:-.35px; }
+.tour-hero p { margin:0; color:rgba(255,255,255,.86); font-size:13px; }
+.tour-eyebrow { color:#d8f7ce; font-size:10px; font-weight:800; letter-spacing:1.2px; }
+.tour-user-pill { flex:0 0 auto; padding:9px 13px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.14); font-size:12px; font-weight:700; }
+.tour-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-bottom:16px; }
+.tour-metrics.unified-approvals { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.tour-metric { padding:16px 18px; border:1px solid var(--border); border-radius:12px; background:var(--card); box-shadow:0 3px 12px rgba(15,23,42,.035); }
+.tour-metric span { display:block; color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.35px; }
+.tour-metric strong { display:block; margin-top:5px; color:var(--demosolar-blue); font-size:24px; line-height:1.2; }
+.tour-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:start; }
+#tourExpenseForms { grid-template-columns:minmax(0,1fr); max-width:760px; }
+.tour-policy-card { border:1px solid #b7e7d9; border-radius:18px; padding:18px; background:linear-gradient(135deg,#f2fbff 0%,#effcf6 100%); box-shadow:0 12px 28px rgba(15,88,110,.08); }
+.tour-policy-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px; }
+.tour-policy-heading span { color:#0f7897; font-size:10px; font-weight:900; letter-spacing:.14em; }
+.tour-policy-heading h3 { margin:3px 0 0; color:#10233e; font-size:19px; }
+.tour-policy-heading>b { min-width:46px; height:46px; border-radius:14px; display:grid; place-items:center; color:#fff; font-size:20px; background:linear-gradient(135deg,#075985,#0ea5a4,#22c55e); }
+.tour-policy-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.tour-policy-grid article { min-width:0; padding:12px 14px; border:1px solid #d7e5ed; border-radius:12px; background:rgba(255,255,255,.82); }
+.tour-policy-grid span,.tour-policy-travel>span { display:block; color:#64748b; font-size:10px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
+.tour-policy-grid strong { display:block; margin-top:5px; color:#18324e; font-size:12px; line-height:1.45; }
+.tour-policy-travel { margin-top:10px; padding:12px 14px; border:1px solid #d7e5ed; border-radius:12px; background:rgba(255,255,255,.82); }
+.tour-policy-travel p { margin:5px 0 0; color:#18324e; font-size:12px; font-weight:700; line-height:1.5; }
+.tour-policy-expense-fields { margin:2px 0 14px; padding:14px; border:1px solid #b7e7d9; border-radius:14px; background:#f6fffb; }
+.tour-policy-expense-fields .form-group { margin-bottom:10px; }
+.tour-policy-eligibility { padding:11px 13px; border-radius:10px; background:#e0f2fe; color:#075985; font-size:12px; font-weight:800; line-height:1.5; }
+.tour-policy-eligibility[data-state="allowed"] { background:#dcfce7; color:#166534; }
+.tour-policy-eligibility[data-state="warning"] { background:#fef3c7; color:#92400e; }
+.tour-policy-eligibility[data-state="blocked"] { background:#fee2e2; color:#b91c1c; }
+@media(max-width:700px){.tour-policy-grid{grid-template-columns:1fr}.tour-policy-card{padding:14px}}
+.recharge-page { max-width:1280px; margin:0 auto; }
+.recharge-hero { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 28px; border-radius:20px; color:#fff; background:linear-gradient(120deg,#075985 0%,#0891b2 52%,#22c55e 100%); box-shadow:0 18px 36px rgba(8,145,178,.17); }
+.recharge-hero span { font-size:10px; font-weight:900; letter-spacing:.14em; color:#bbf7d0; }
+.recharge-hero h2 { margin:4px 0 3px; font-size:28px; }
+.recharge-hero p { margin:0; font-size:13px; color:#e0f2fe; }
+.recharge-hero>b { display:grid; place-items:center; min-width:58px; height:58px; border:1px solid rgba(255,255,255,.36); border-radius:18px; background:rgba(255,255,255,.15); font-size:24px; }
+.recharge-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr); gap:16px; margin-top:16px; align-items:start; }
+.recharge-layout>.card { margin:0; }
+.recharge-policy-summary { margin:0 0 16px; padding:14px 16px; border:1px solid #a7f3d0; border-radius:12px; background:#ecfdf5; color:#065f46; font-size:13px; font-weight:800; line-height:1.5; }
+.recharge-policy-summary.blocked { border-color:#fecaca; background:#fef2f2; color:#b91c1c; }
+.recharge-expense-list { display:grid; gap:10px; }
+.recharge-claim { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; padding:14px 16px; border:1px solid #dbe6ee; border-radius:13px; background:#fbfdff; }
+.recharge-claim h4 { margin:0; color:#10233e; font-size:14px; }
+.recharge-claim p { margin:5px 0 0; color:#64748b; font-size:11px; line-height:1.45; }
+.recharge-claim strong { color:#047857; font-size:17px; text-align:right; }
+.recharge-status { display:inline-flex; margin-left:6px; padding:3px 7px; border-radius:999px; background:#fef3c7; color:#92400e; font-size:9px; font-weight:900; text-transform:uppercase; }
+@media(max-width:950px){.recharge-layout{grid-template-columns:1fr}.recharge-hero{padding:20px}.recharge-hero h2{font-size:24px}}
+.expense-approval-center { display:grid; gap:14px; }
+.expense-employee-card { border:1px solid #cfe0ea; border-radius:16px; background:#fff; overflow:hidden; box-shadow:0 8px 22px rgba(15,70,90,.06); }
+.expense-employee-card>summary,.expense-trip-card>summary { display:flex; justify-content:space-between; align-items:center; gap:16px; cursor:pointer; list-style:none; padding:16px 18px; }
+.expense-employee-card>summary { background:linear-gradient(100deg,#effaff,#effcf5); }
+.expense-employee-card>summary::-webkit-details-marker,.expense-trip-card>summary::-webkit-details-marker { display:none; }
+.expense-employee-card summary span,.expense-trip-card summary span { min-width:0; }
+.expense-employee-card summary b,.expense-trip-card summary b { display:block; color:#10233e; font-size:14px; }
+.expense-employee-card summary small,.expense-trip-card summary small { display:block; margin-top:4px; color:#64748b; font-size:10px; }
+.expense-employee-card>summary>span:last-child { text-align:right; }
+.expense-employee-body { padding:14px; background:#f8fbfd; }
+.expense-trip-card { margin-bottom:12px; border:1px solid #d9e4eb; border-radius:13px; background:#fff; overflow:hidden; }
+.expense-trip-card>summary { padding:13px 15px; }
+.expense-trip-card>summary>strong { color:#047857; white-space:nowrap; }
+.expense-trip-body { padding:0 14px 14px; }
+.expense-approval-category { margin-top:12px; border:1px solid #deeaef; border-radius:12px; overflow:hidden; }
+.expense-approval-category h5 { margin:0; padding:10px 13px; color:#075985; background:#edf8fc; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+.expense-approval-table th,.expense-approval-table td,.recharge-approval-table th,.recharge-approval-table td { white-space:nowrap; font-size:10px; }
+.expense-approval-table td:first-child,.recharge-approval-table td:first-child { min-width:230px; white-space:normal; }
+.expense-approval-table td small,.recharge-approval-table td small { display:block; margin-top:4px; color:#64748b; }
+.expense-over-limit { color:#dc2626!important; font-weight:900; background:#fff7f7; }
+.expense-special-input { width:110px!important; min-height:34px!important; padding:6px 8px!important; }
+.expense-note-input { display:block; width:170px!important; min-height:32px!important; margin-top:5px; padding:5px 8px!important; }
+.expense-final-approval-cell { min-width:125px; vertical-align:middle!important; }
+.expense-final-approval-cell>strong { display:block; color:#047857; font-size:13px; }
+.expense-save-approval { display:block; width:100%; min-width:96px; margin-top:9px; }
+.expense-trip-actions { display:flex; align-items:center; justify-content:flex-end; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.expense-trip-actions>strong { margin-left:auto; color:#047857; }
+.expense-grand-total { display:flex; justify-content:flex-end; align-items:center; gap:18px; padding:15px 4px 3px; color:#10233e; font-weight:900; }
+.expense-grand-total strong { color:#047857; font-size:20px; }
+.reimburse-parameter-grid { display:grid; grid-template-columns:repeat(4,minmax(135px,1fr)); gap:10px; margin:4px 0 14px; }
+.reimburse-parameter-grid article { padding:13px 14px; border:1px solid #dbe7ed; border-radius:11px; background:#f8fbfc; }
+.reimburse-parameter-grid span { display:block; color:#64748b; font-size:10px; font-weight:900; letter-spacing:.04em; text-transform:uppercase; }
+.reimburse-parameter-grid strong { display:block; margin-top:5px; color:#075985; font-size:18px; }
+.reimburse-parameter-grid .grand { border-color:#9ee6ca; background:#ecfdf5; }
+.reimburse-parameter-grid .grand strong { color:#047857; }
+.reimburse-status { display:inline-flex; width:max-content; margin-top:5px; padding:3px 8px; border-radius:999px; font-size:9px; font-style:normal; font-weight:900; text-transform:uppercase; }
+.reimburse-status.pending { color:#9a5b00; background:#fff4cf; }
+.reimburse-status.settled { color:#047857; background:#dff8ec; }
+@media(max-width:700px){.expense-employee-card>summary,.expense-trip-card>summary{align-items:flex-start;flex-direction:column}.expense-employee-card>summary>span:last-child{text-align:left}.expense-trip-actions>strong{width:100%;margin-left:0}}
+@media(max-width:900px){.reimburse-parameter-grid{grid-template-columns:repeat(2,minmax(130px,1fr))}}
+.tour-panel[hidden],#tourExcelExport[hidden] { display:none !important; }
+.tour-expense-form-actions { display:grid; grid-template-columns:auto minmax(180px,1fr); gap:10px; align-items:center; }
+.tour-finish-hint { align-self:center; color:#8a6b32; font-size:11px; font-weight:700; }
+.tour-panel { min-width:0; margin-bottom:16px; padding:20px; border-radius:13px; box-shadow:0 4px 16px rgba(15,23,42,.035); }
+.tour-panel .card-header { margin-bottom:16px; }
+.tour-help { margin:4px 0 0; color:var(--muted); font-size:11px; line-height:1.45; }
+.tour-panel textarea { resize:vertical; min-height:64px; }
+.tour-submit { width:100%; min-height:40px; }
+.tour-list-panel { padding:20px; }
+.tour-list-header { align-items:center; gap:16px; flex-wrap:wrap; }
+.tour-list-controls { display:flex; align-items:center; justify-content:flex-end; gap:8px; flex:1 1 430px; }
+.tour-list-controls input { width:min(260px,100%); min-width:140px; }
+.tour-trip-list { display:grid; gap:12px; }
+.tour-trip { min-width:0; padding:16px; border:1px solid #dbe5ec; border-left:4px solid var(--demosolar-teal); border-radius:11px; background:linear-gradient(135deg,#fff 72%,#f2faf6); animation:tourTripEnter .22s ease both; }
+.tour-trip-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+.tour-trip-main { min-width:0; }
+.tour-trip-main h4 { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:0; color:#123c57; font-size:16px; }
+.tour-trip-main p { margin:5px 0 0; color:var(--muted); font-size:12px; line-height:1.5; }
+.tour-trip-total { flex:0 0 auto; text-align:right; }
+.tour-trip-total strong { display:block; color:#0c6b48; font-size:19px; }
+.tour-trip-total small,.tour-expenses-table small { display:block; margin-top:3px; color:var(--muted); font-size:10px; }
+.tour-status { padding:4px 8px; border-radius:999px; color:#92400e; background:#fef3c7; font-size:10px; font-weight:800; }
+.tour-status.done { color:#047857; background:#d1fae5; }
+.tour-warning { padding:9px 11px; border:1px solid #fde68a; border-radius:8px; background:#fffbeb; color:#854d0e; font-size:12px; }
+.tour-mode-note { margin:12px 0 0; color:#475569; font-size:12px; white-space:pre-wrap; }
+.tour-expenses-table { width:100%; margin-top:13px; border-collapse:collapse; font-size:11px; }
+.tour-expenses-table th,.tour-expenses-table td { padding:9px 8px; border-bottom:1px solid #e8eef2; text-align:left; vertical-align:top; }
+.tour-expenses-table th { color:#52677a; background:#f6fafc; font-size:10px; text-transform:uppercase; letter-spacing:.25px; }
+.tour-expenses-table td:last-child { text-align:right; white-space:nowrap; font-weight:800; }
+.tour-receipt-file { max-width:230px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.tour-receipt-link { display:inline-flex; align-items:center; justify-content:center; min-height:28px; margin-top:6px; padding:5px 9px; border:1px solid #9ddbd0; border-radius:7px; color:#076b62; background:#effcf8; font-family:inherit; font-size:10px; font-weight:700; line-height:1; cursor:pointer; }
+.tour-receipt-link:hover { border-color:#16a085; background:#dcf8f0; }
+.tour-receipt-open { overflow:hidden; }
+.tour-receipt-modal { position:fixed; inset:0; z-index:12000; display:grid; place-items:center; padding:24px; background:rgba(5,18,35,.72); backdrop-filter:blur(5px); }
+.tour-receipt-modal[hidden] { display:none; }
+.tour-receipt-dialog { display:grid; grid-template-rows:auto minmax(0,1fr) auto; width:min(1050px,96vw); height:min(820px,92vh); overflow:hidden; border:1px solid rgba(255,255,255,.35); border-radius:18px; background:#f4f8fb; box-shadow:0 28px 80px rgba(0,0,0,.34); }
+.tour-receipt-dialog > header { display:flex; justify-content:space-between; gap:20px; padding:17px 20px; color:#fff; background:var(--demosolar-gradient); }
+.tour-receipt-dialog h3 { margin:2px 0 3px; font-size:19px; }
+.tour-receipt-dialog header p { margin:0; color:rgba(255,255,255,.84); font-size:11px; }
+.tour-receipt-eyebrow { color:#d8f7ce; font-size:9px; font-weight:800; letter-spacing:1.1px; }
+.tour-receipt-close { align-self:flex-start; width:36px; height:36px; border:1px solid rgba(255,255,255,.35); border-radius:10px; color:#fff; background:rgba(255,255,255,.13); font-size:24px; line-height:1; cursor:pointer; }
+.tour-receipt-preview-body { display:grid; min-height:0; overflow:auto; padding:18px; background:linear-gradient(135deg,#dce7ee,#f2f7fa); }
+.tour-receipt-image { align-self:center; justify-self:center; max-width:100%; max-height:100%; object-fit:contain; border-radius:8px; background:#fff; box-shadow:0 10px 30px rgba(15,23,42,.18); }
+.tour-receipt-frame { width:100%; height:100%; min-height:480px; border:0; border-radius:9px; background:#fff; }
+.tour-receipt-dialog > footer { display:flex; align-items:center; justify-content:flex-end; gap:10px; padding:12px 18px; border-top:1px solid #d8e2e9; background:#fff; }
+.tour-receipt-dialog > footer > span { min-width:0; margin-right:auto; overflow:hidden; color:#64748b; font-size:11px; font-weight:700; text-overflow:ellipsis; white-space:nowrap; }
+.tour-trip-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:13px; padding-top:12px; border-top:1px solid #e8eef2; }
+.tour-trip-actions .btn { min-height:34px; padding:7px 11px; font-size:11px; }
+.tour-empty { padding:28px 14px; border:1px dashed #cbd5e1; border-radius:10px; color:var(--muted); font-size:13px; text-align:center; background:#fbfdff; }
+@keyframes tourTripEnter { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:900px) { .tour-form-grid { grid-template-columns:1fr; gap:0; } }
+@media(max-width:1100px) { .tour-metrics.unified-approvals { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:640px) {
+  .tour-hero { align-items:flex-start; flex-direction:column; padding:19px; }
+  .tour-hero h2 { font-size:22px; }
+  .tour-user-pill { max-width:100%; overflow-wrap:anywhere; }
+  .tour-metrics { grid-template-columns:1fr; gap:9px; }
+  .tour-metric { padding:12px 14px; }
+  .tour-metric strong { font-size:21px; }
+  .tour-panel,.tour-list-panel { padding:14px; }
+  .tour-list-controls { align-items:stretch; flex-direction:column; flex-basis:100%; }
+  .tour-list-controls input { width:100%; }
+  .tour-list-controls .btn { width:100%; }
+  .tour-trip-head { flex-direction:column; }
+  .tour-trip-total { text-align:left; }
+  .tour-expenses-table { min-width:620px; }
+  .tour-receipt-modal { padding:0; }
+  .tour-receipt-dialog { width:100vw; height:100vh; border:0; border-radius:0; }
+  .tour-receipt-dialog > footer { align-items:stretch; flex-wrap:wrap; }
+  .tour-receipt-dialog > footer > span { flex-basis:100%; }
+  .tour-receipt-dialog > footer .btn { flex:1 1 auto; }
+}
+@media(prefers-reduced-motion:reduce) { .tour-trip { animation:none; } }

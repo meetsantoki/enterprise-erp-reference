@@ -1,0 +1,265 @@
+/* Activated only inside the DemoSolar Android shell. Desktop layout is unchanged. */
+/* Keep the realistic login image full-screen and controls centered on phones. */
+body.demosolar-mobile-app #loginOverlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: max(10px, env(safe-area-inset-top)) 14px max(8px, env(safe-area-inset-bottom));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+body.demosolar-mobile-app #loginOverlay .login-shell { display: contents; width: auto; min-height: 0; margin: 0; }
+body.demosolar-mobile-app #loginOverlay .login-showcase,
+body.demosolar-mobile-app #loginOverlay .login-solar-scene,
+body.demosolar-mobile-app #loginOverlay .login-background-image { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 68% center; }
+body.demosolar-mobile-app #loginOverlay .login-card {
+  align-self: center;
+  flex: 0 0 auto;
+  width: min(420px, calc(100vw - 28px));
+  max-width: 420px;
+  max-height: calc(100dvh - 40px);
+  margin: 0 auto;
+  padding: 0 0 2px;
+}
+body.demosolar-mobile-app #loginOverlay .login-group { margin-bottom: 9px; }
+body.demosolar-mobile-app #loginOverlay .login-input { min-height: 44px; font-size: 16px; }
+body.demosolar-mobile-app #loginOverlay .btn-login { min-height: 46px; font-size: 14px; }
+@media (max-height: 620px) {
+  body.demosolar-mobile-app #loginOverlay { justify-content: flex-end; padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  body.demosolar-mobile-app #loginOverlay .login-group { margin-bottom: 6px; }
+  body.demosolar-mobile-app #loginOverlay .login-group label { margin-bottom: 4px; }
+  body.demosolar-mobile-app #loginOverlay .login-input { min-height: 40px; padding-top: 8px; padding-bottom: 8px; }
+  body.demosolar-mobile-app #loginOverlay .btn-login { min-height: 42px; margin-top: 0; }
+}
+
+body.demosolar-mobile-app {
+  display: block;
+  min-height: 100dvh;
+  padding-bottom: calc(66px + env(safe-area-inset-bottom));
+  overscroll-behavior: none;
+}
+
+body.demosolar-mobile-app .sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(86vw, 330px);
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  z-index: 5000;
+  transform: translateX(-104%);
+  transition: transform 180ms ease;
+  box-shadow: 18px 0 45px rgba(15, 23, 42, .32);
+}
+
+.sidebar-mobile-close { display: none; }
+body.demosolar-mobile-app .sidebar-mobile-close {
+  position: absolute; top: 10px; right: 12px; z-index: 2; display: inline-flex;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+  padding: 0; border: 1px solid #64748b; border-radius: 50%; background: #1e293b;
+  color: #fff; font-size: 26px; line-height: 1; cursor: pointer;
+}
+
+body.demosolar-mobile-app.demosolar-mobile-menu-open .sidebar { transform: translateX(0); }
+body.demosolar-mobile-app .sidebar-nav { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; scrollbar-width: thin; touch-action: pan-y; }
+body.demosolar-mobile-app .main-wrapper { width: 100%; height: auto; min-height: 100dvh; overflow: visible; padding-bottom: 12px; }
+body.demosolar-mobile-app .topbar { min-height: 54px; padding: 7px 12px; }
+body.demosolar-mobile-app .topbar-screen-title { max-width: 57vw; font-size: 12px; line-height: 1.25; }
+body.demosolar-mobile-app .user-info { display: none; }
+body.demosolar-mobile-app .content-area { padding: 10px; }
+body.demosolar-mobile-app .card { border-radius: 12px; padding: 12px !important; }
+body.demosolar-mobile-app .card-header { gap: 8px; flex-wrap: wrap; }
+body.demosolar-mobile-app .grid-2,
+body.demosolar-mobile-app .grid-3,
+body.demosolar-mobile-app .grid-4,
+body.demosolar-mobile-app .form-grid,
+body.demosolar-mobile-app .account-horizontal-fields { grid-template-columns: 1fr !important; }
+body.demosolar-mobile-app .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+body.demosolar-mobile-app .kpi-card { padding: 12px; min-width: 0; }
+body.demosolar-mobile-app input,
+body.demosolar-mobile-app select,
+body.demosolar-mobile-app textarea,
+body.demosolar-mobile-app button { min-height: 44px; font-size: 14px; }
+body.demosolar-mobile-app .btn { justify-content: center; padding: 11px 14px; }
+body.demosolar-mobile-app .table-wrapper,
+body.demosolar-mobile-app .table-container,
+body.demosolar-mobile-app [style*="overflow-x"] { max-width: 100%; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+body.demosolar-mobile-app .custom-table,
+body.demosolar-mobile-app .excel-table { min-width: 720px; }
+body.demosolar-mobile-app .erp-modal-card { width: calc(100vw - 24px); max-height: 86dvh; overflow-y: auto; }
+body.demosolar-mobile-app #erpToastContainer { left: 10px; right: 10px; width: auto; }
+body.demosolar-mobile-app .report-studio-hero,
+body.demosolar-mobile-app .report-generate-bar { align-items: stretch; flex-direction: column; }
+body.demosolar-mobile-app .report-generate-button { width: 100%; min-width: 0; }
+body.demosolar-mobile-app .view-panel.active { animation: demosolar-mobile-view-in 220ms cubic-bezier(.2,.8,.2,1); }
+body.demosolar-mobile-app .view-panel.active .card,
+body.demosolar-mobile-app .view-panel.active .kpi-card { animation: demosolar-mobile-card-in 260ms cubic-bezier(.2,.8,.2,1) both; }
+body.demosolar-mobile-app .view-panel.active .kpi-card:nth-child(2) { animation-delay: 35ms; }
+body.demosolar-mobile-app .view-panel.active .kpi-card:nth-child(3) { animation-delay: 70ms; }
+body.demosolar-mobile-app .view-panel.active .kpi-card:nth-child(4) { animation-delay: 105ms; }
+body.demosolar-mobile-app .btn:active,
+body.demosolar-mobile-app .menu-btn:active,
+body.demosolar-mobile-app .sub-item:active { transform: scale(.97); transition-duration: 70ms; }
+@keyframes demosolar-mobile-view-in {
+  from { opacity: .25; transform: translate3d(0,8px,0); }
+  to { opacity: 1; transform: translate3d(0,0,0); }
+}
+@keyframes demosolar-mobile-card-in {
+  from { opacity: .3; transform: translate3d(0,10px,0) scale(.992); }
+  to { opacity: 1; transform: translate3d(0,0,0) scale(1); }
+}
+
+#demosolarMobileNetworkBadge {
+  display: none;
+  position: fixed;
+  top: env(safe-area-inset-top);
+  left: 50%;
+  z-index: 10000;
+  transform: translateX(-50%);
+  padding: 4px 10px;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  font: 800 10px/1.2 system-ui, sans-serif;
+  letter-spacing: .35px;
+  pointer-events: none;
+}
+#demosolarMobileNetworkBadge.offline { display: block; background: #b91c1c; }
+#demosolarMobileNetworkBadge.online { display: block; background: #059669; animation: demosolar-online-hide 2.2s forwards; }
+@keyframes demosolar-online-hide { 0%, 75% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+
+@media (max-width: 430px) {
+  body.demosolar-mobile-app .kpi-grid { grid-template-columns: 1fr 1fr; }
+  body.demosolar-mobile-app .login-card { padding: 26px 18px; }
+  body.demosolar-mobile-app .font-company-title { font-size: 12pt !important; }
+}
+
+/* Responsive layout for the live ERP opened in a phone browser. */
+@media screen and (max-width: 760px) {
+  html,
+  body:not(.demosolar-mobile-app) {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body:not(.demosolar-mobile-app) { min-height: 100dvh; }
+
+  body:not(.demosolar-mobile-app) .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(86vw, 320px);
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    margin-left: 0;
+    z-index: 5000;
+    transform: translateX(-104%);
+    transition: transform 180ms ease;
+    box-shadow: 18px 0 45px rgba(15, 23, 42, .32);
+  }
+
+  body:not(.demosolar-mobile-app) .sidebar-header { position: relative; padding-top: 54px; }
+  body:not(.demosolar-mobile-app) .sidebar-mobile-close {
+    position: absolute; top: 9px; right: 12px; z-index: 2; display: inline-flex;
+    width: 40px; height: 40px; align-items: center; justify-content: center;
+    padding: 0; border: 1px solid #64748b; border-radius: 50%; background: #1e293b;
+    color: #fff; font-size: 26px; line-height: 1; cursor: pointer;
+  }
+
+  body:not(.demosolar-mobile-app):not(.erp-sidebar-collapsed) .sidebar { transform: translateX(0); }
+  body:not(.demosolar-mobile-app).erp-sidebar-collapsed .sidebar { margin-left: 0; transform: translateX(-104%); }
+  body:not(.demosolar-mobile-app) .sidebar-nav {
+    flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #64748b #0b1329; touch-action: pan-y;
+  }
+
+  body:not(.demosolar-mobile-app) #mainScrollContainer {
+    position: relative; z-index: 0; width: 100%; min-width: 0; height: 100dvh; overflow-x: hidden; overscroll-behavior-x: none;
+  }
+
+  body:not(.demosolar-mobile-app) .topbar { min-height: 54px; padding: 6px 10px; gap: 6px; }
+  body:not(.demosolar-mobile-app) .topbar-title-group { gap: 5px; }
+  body:not(.demosolar-mobile-app) .topbar-screen-title { max-width: 52vw; font-size: 12px; line-height: 1.25; overflow-wrap: anywhere; }
+  body:not(.demosolar-mobile-app) .topbar > div:last-child { gap: 4px !important; }
+  body:not(.demosolar-mobile-app) .profile-trigger { gap: 4px; padding: 4px; }
+  body:not(.demosolar-mobile-app) .user-info { display: none; }
+
+  body:not(.demosolar-mobile-app) .content-area { width: 100%; min-width: 0; padding: 10px; }
+  body:not(.demosolar-mobile-app) main .card { min-width: 0; max-width: 100%; padding: 13px !important; border-radius: 12px; }
+  body:not(.demosolar-mobile-app) main .card-header { align-items: flex-start; gap: 8px; flex-wrap: wrap; }
+
+  body:not(.demosolar-mobile-app) main .grid-2,
+  body:not(.demosolar-mobile-app) main .grid-3,
+  body:not(.demosolar-mobile-app) main .grid-4,
+  body:not(.demosolar-mobile-app) main .form-grid,
+  body:not(.demosolar-mobile-app) main .account-horizontal-fields,
+  body:not(.demosolar-mobile-app) main .view-panel.active [style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body:not(.demosolar-mobile-app) main .view-panel.active [style*="display:flex"],
+  body:not(.demosolar-mobile-app) main .view-panel.active [style*="display: flex"] { flex-wrap: wrap !important; }
+
+  body:not(.demosolar-mobile-app) main .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  body:not(.demosolar-mobile-app) main .kpi-card { min-width: 0; padding: 11px; }
+  body:not(.demosolar-mobile-app) main .kpi-value { font-size: 21px; overflow-wrap: anywhere; }
+
+  body:not(.demosolar-mobile-app) main input,
+  body:not(.demosolar-mobile-app) main select,
+  body:not(.demosolar-mobile-app) main textarea,
+  body:not(.demosolar-mobile-app) main button { max-width: 100%; min-width: 0; font-size: 14px; }
+  body:not(.demosolar-mobile-app) main input:not([type="checkbox"]):not([type="radio"]),
+  body:not(.demosolar-mobile-app) main select,
+  body:not(.demosolar-mobile-app) main textarea { min-height: 42px; }
+  body:not(.demosolar-mobile-app) main input[type="checkbox"],
+  body:not(.demosolar-mobile-app) main input[type="radio"] { width: auto; min-height: 0; flex: 0 0 auto; }
+  body:not(.demosolar-mobile-app) main .btn { justify-content: center; min-height: 42px; padding: 10px 12px; white-space: normal; }
+
+  body:not(.demosolar-mobile-app) main .table-scroll,
+  body:not(.demosolar-mobile-app) main .table-wrapper,
+  body:not(.demosolar-mobile-app) main .table-container,
+  body:not(.demosolar-mobile-app) main .production-sheet-scroll,
+  body:not(.demosolar-mobile-app) main [style*="overflow-x"] {
+    max-width: 100%; overflow-x: auto !important; -webkit-overflow-scrolling: touch;
+  }
+
+  body:not(.demosolar-mobile-app) main .custom-table,
+  body:not(.demosolar-mobile-app) main .excel-table { min-width: 680px; }
+  body:not(.demosolar-mobile-app) main .card > .custom-table,
+  body:not(.demosolar-mobile-app) main .card > .excel-table { display: block; width: 100%; overflow-x: auto; }
+  body:not(.demosolar-mobile-app) main img,
+  body:not(.demosolar-mobile-app) main svg,
+  body:not(.demosolar-mobile-app) main canvas,
+  body:not(.demosolar-mobile-app) main video { max-width: 100%; }
+  body:not(.demosolar-mobile-app) .footer-credit-badge { right: 8px; bottom: 6px; max-width: calc(100vw - 16px); font-size: 8px; }
+}
+
+@media screen and (max-width: 480px) {
+  body:not(.demosolar-mobile-app) #navbarDateTimeDisplay { display: none; }
+  body:not(.demosolar-mobile-app) .erp-sidebar-toggle { width: 32px; height: 36px; }
+  body:not(.demosolar-mobile-app) main .card { padding: 11px !important; }
+  body:not(.demosolar-mobile-app) main .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body:not(.demosolar-mobile-app) .footer-credit-badge { display: none; }
+}
+
+@media print {
+  body.demosolar-mobile-app { padding-bottom: 0; }
+  #demosolarMobileNetworkBadge { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.demosolar-mobile-app *, body.demosolar-mobile-app *::before, body.demosolar-mobile-app *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

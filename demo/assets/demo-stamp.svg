@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Demo approval stamp">
+  <circle cx="120" cy="120" r="104" fill="none" stroke="#1d4ed8" stroke-width="10"/>
+  <circle cx="120" cy="120" r="82" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#1d4ed8">DEMO</text>
+  <text x="120" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#1d4ed8">APPROVED</text>
+</svg>

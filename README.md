@@ -22,17 +22,18 @@ A portfolio reference implementation of a browser-based enterprise resource plan
 
 ## Portfolio scope
 
-This public repository is a documentation-focused, sanitized reference. Production source code, databases, credentials, customer records, employee documents, uploaded files, signatures, photos, backups, and environment-specific configuration are intentionally excluded.
+This public repository contains a sanitized demo edition of the application. Production databases, credentials, customer records, employee documents, uploaded files, signatures, photos, backups, company identifiers, and environment-specific configuration are intentionally excluded.
 
-The repository is intended to demonstrate application structure and engineering work. It is not a production deployment package and requires environment-specific configuration, dependencies, and an independently initialized database before it can run.
+The repository is intended to demonstrate application structure and engineering work. The source under `demo/` uses fictional contacts and reserved example infrastructure values. It is not a production deployment package and requires environment-specific configuration, dependencies, and an independently initialized database before it can run.
 
-## Production implementation structure
+## Sanitized implementation structure
 
-The private production implementation is organized around these areas; their contents are not published in this public reference repository:
+The public demo preserves the main application structure while excluding production records and secrets:
 
 - `index.html` — main application interface
 - `js/` — modular frontend workflows
 - `backend/` — API, authorization, audit, and workflow services
 - `assets/` — styles and client-side support files
 - `service-worker.js` — application-shell caching
+- `demo/` — sanitized application source and fictional fixtures
 

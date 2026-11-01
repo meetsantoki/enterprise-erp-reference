@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Abstract demo solar farm background">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0c4a6e"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1280" cy="180" r="85" fill="#fde68a"/>
+  <path d="M0 650l320-120 300 110 290-150 330 130 360-115v395H0z" fill="#14532d" opacity=".82"/>
+  <g fill="#0f172a" stroke="#94a3b8" stroke-width="8"><path d="M120 600h300v150H120zM500 560h300v150H500zM880 610h300v150H880z"/></g>
+  <text x="80" y="110" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#fff">DemoSolar ERP Portfolio</text>
+</svg>

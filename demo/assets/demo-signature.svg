@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="Fictional demo signature">
+  <path d="M18 86c55-76 58 15 105-33 28-29 12 41 56 2 34-30 10 45 69 0 42-32 34 19 82-7" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M45 99h330" stroke="#64748b" stroke-width="2"/>
+  <text x="210" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#475569">FICTIONAL DEMO SIGNATURE</text>
+</svg>

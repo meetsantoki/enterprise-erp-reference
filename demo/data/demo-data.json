@@ -1,0 +1,54 @@
+{
+  "notice": "All records in this file are fictional and intended only for demonstrations.",
+  "users": [
+    {
+      "id": "DEMO-ADMIN-001",
+      "name": "Aarav Mehta",
+      "username": "demo.admin",
+      "role": "admin",
+      "department": "Administration",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "DEMO-SALES-001",
+      "name": "Neha Sharma",
+      "username": "demo.sales",
+      "role": "user",
+      "department": "Sales",
+      "status": "ACTIVE"
+    }
+  ],
+  "customers": [
+    {
+      "id": "DEMO-CUST-001",
+      "name": "Example Distribution Pvt. Ltd.",
+      "contactPerson": "Rohan Kapoor",
+      "phone": "9000000011",
+      "email": "customer@example.test",
+      "gst": "24AAAAA0000A1Z5",
+      "pan": "AAAAA0000A",
+      "address": "Demo Industrial Park, Ahmedabad, Gujarat 380001"
+    }
+  ],
+  "salesOrders": [
+    {
+      "id": "DEMO-CO-001",
+      "coNumber": "CO-DEMO-0001",
+      "customerId": "DEMO-CUST-001",
+      "product": "Demo Solar Module 550W",
+      "quantity": 100,
+      "status": "PENDING_APPROVAL",
+      "createdBy": "demo.sales"
+    }
+  ],
+  "approvalRequests": [
+    {
+      "id": "DEMO-REQ-001",
+      "type": "SALES_ORDER_EDIT",
+      "recordId": "DEMO-CO-001",
+      "requestedBy": "demo.sales",
+      "assignedRole": "admin",
+      "status": "PENDING"
+    }
+  ]
+}
